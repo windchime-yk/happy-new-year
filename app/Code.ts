@@ -1,9 +1,22 @@
-const word: string = 'World'
-Logger.log(`Hello, ${word}!!`)
+type Env = 'WEBHOOK_URL'
 
-const exponentiation = (n: number): number => n * n
-Logger.log(exponentiation(5))
+const getEnvProperty = (property: Env): string => PropertiesService.getScriptProperties().getProperty(property)
 
-const logTest = () => {
-  Logger.log('テスト')
+const postToSlack = (): void => {
+  const payload = {
+    text: 'Happy New Year!! :tada:'
+  }
+  const url = getEnvProperty('WEBHOOK_URL')
+  const options: GoogleAppsScript.URL_Fetch.URLFetchRequestOptions = {
+    method: 'post',
+    contentType: 'application/json',
+    payload: JSON.stringify(payload)
+  }
+
+  UrlFetchApp.fetch(url, options)
+}
+
+const postNewYear = (): void => {
+  const nowDate = Utilities.formatDate(new Date(), 'Asia/Tokyo', 'MM/dd')
+  if (nowDate === '1/1') postToSlack()
 }
