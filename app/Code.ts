@@ -4,7 +4,7 @@ const getEnvProperty = (property: Env): string => PropertiesService.getScriptPro
 
 const postToSlack = (): void => {
   const payload = {
-    text: 'Happy New Year!! :tada:'
+    text: '<!channel> Happy New Year!! :tada:'
   }
   const url = getEnvProperty('WEBHOOK_URL')
   const options: GoogleAppsScript.URL_Fetch.URLFetchRequestOptions = {
