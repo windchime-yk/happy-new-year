@@ -18,5 +18,5 @@ const postToSlack = (): void => {
 
 const postNewYear = (): void => {
   const nowDate = Utilities.formatDate(new Date(), 'Asia/Tokyo', 'MM/dd')
-  if (nowDate === '1/1') postToSlack()
+  if (nowDate === '01/01') postToSlack()
 }
