@@ -12,9 +12,9 @@
   },
   "packageManager": "pnpm@9.15.9",
   "devDependencies": {
-    "@google/clasp": "^2.3.0"
+    "@google/clasp": "^2.5.0"
   },
   "dependencies": {
-    "@types/google-apps-script": "^1.0.15"
+    "@types/google-apps-script": "^1.0.97"
   }
 }

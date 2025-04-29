@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@types/google-apps-script':
-        specifier: ^1.0.15
+        specifier: ^1.0.97
         version: 1.0.97
     devDependencies:
       '@google/clasp':
-        specifier: ^2.3.0
+        specifier: ^2.5.0
         version: 2.5.0
 
 packages:
