@@ -5,13 +5,15 @@
     "make": "clasp create --rootDir ./app --title",
     "clone": "clasp clone",
     "pull": "clasp pull",
-    "push": "clasp push"
+    "push": "clasp push",
+    "format": "biome check . --write --unsafe"
   },
   "volta": {
     "node": "22.15.0"
   },
   "packageManager": "pnpm@9.15.9",
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@google/clasp": "^2.5.0"
   },
   "dependencies": {
