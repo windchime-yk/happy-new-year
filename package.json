@@ -7,6 +7,9 @@
     "pull": "clasp pull",
     "push": "clasp push"
   },
+  "volta": {
+    "node": "22.15.0"
+  },
   "devDependencies": {
     "@google/clasp": "^2.3.0"
   },
